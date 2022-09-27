@@ -1,0 +1,24 @@
+<tr id="batch_id<%= batch.id %>">
+  <td><%= batch.name %></td>
+  <td><%= batch.state %></td>
+  <td><%= batch.country %></td>
+  <td><%= batch.phone %></td>
+  <td>
+    <%= link_to 'view', batch , class: 'btn btn-success' %>
+    <%= link_to 'Edit', edit_batch_path(batch) , class: 'btn btn-info' %>
+    <%= link_to 'Delete', batch ,method: :delete, data: {confirm: 'Are you sure'}, class: 'btn btn-danger' %>
+  </td>
+<!--  <td>-->
+<!--    <div class="dropdown show">-->
+<!--      <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">-->
+<!--        Dropdown link-->
+<!--      </a>-->
+
+<!--      <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">-->
+<!--        <a class="dropdown-item" href="#">Action</a>-->
+<!--        <a class="dropdown-item" href="#">Another action</a>-->
+<!--        <a class="dropdown-item" href="#">Something else here</a>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </td>-->
+</tr>

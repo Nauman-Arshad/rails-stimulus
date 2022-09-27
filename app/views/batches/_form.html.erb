@@ -1,0 +1,42 @@
+<%= form_with(model: batch) do |form| %>
+  <% if batch.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(batch.errors.count, "error") %> prohibited this batch from being saved:</h2>
+
+      <ul>
+        <% batch.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :name, class: 'form-label mb-2 mt-3' %>
+    <%= form.text_field :name, class: 'form-control' %>
+  </div>
+
+  <div>
+    <%= form.label :city, class: 'form-label mb-2 mt-3' %>
+    <%= form.text_field :city, class: 'form-control' %>
+  </div>
+
+  <div>
+    <%= form.label :state, class: 'form-label mb-2 mt-3' %>
+    <%= form.text_field :state, class: 'form-control' %>
+  </div>
+
+  <div>
+    <%= form.label :country, class: 'form-label mb-2 mt-3' %>
+    <%= form.text_field :country, class: 'form-control' %>
+  </div>
+
+  <div>
+    <%= form.label :phone, class: 'form-label mb-2 mt-3' %>
+    <%= form.text_field :phone, class: 'form-control' %>
+  </div>
+
+  <div>
+    <%= form.submit class: 'btn bg-secondary text-white mt-2' %>
+  </div>
+<% end %>

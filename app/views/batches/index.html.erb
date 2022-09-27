@@ -1,0 +1,22 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Listed Batches</h1>
+
+<table class="table">
+  <thead>
+  <tr>
+    <th>Name</th>
+    <th>State</th>
+    <th>Country</th>
+    <th>Phone</th>
+    <th>Actions</th>
+  </tr>
+  </thead>
+  <tbody>
+  <% @batches.each do |batch| %>
+    <%= render 'batch', batch: batch %>
+  <% end %>
+  </tbody>
+</table>
+
+<%= link_to "New batch", new_batch_path %>
